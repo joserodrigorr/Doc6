@@ -6,5 +6,3 @@ sidebar: home_sidebar
 permalink: index.html
 summary: Pagina de inicio
 ---
-
-## Documentación 
