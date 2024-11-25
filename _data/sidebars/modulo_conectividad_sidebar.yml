@@ -1,4 +1,5 @@
 # This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+# Esta es la tabla de contenidos de la barra lateral. El código de la barra lateral recorre las secciones y proporciona el formato adecuado.
 
 
 entries:
@@ -20,10 +21,10 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Getting Started
+  - title: Empezando #Getting Started
     output: web, pdf
     folderitems:
-    - title: Modulo Conectividad home
+    - title: Modulo Conectividad inicial
       url: /mc_landing_page.html
       output: web
 

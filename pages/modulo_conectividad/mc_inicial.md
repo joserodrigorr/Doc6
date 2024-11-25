@@ -4,7 +4,7 @@ keywords:
 last_updated: Noviembre 25, 2024
 tags: #[getting_started]
 summary: "Inicio del Modulo de conectividad"
-sidebar: home_sidebar
+sidebar: modulo_conectividad_sidebar
 permalink: mc_inicial.html
 folder: modulo_conectividad
 ---
@@ -67,8 +67,10 @@ https://integradorqa.siesacloud.com/login/[nombrecompañia]
 
 Donde [nombrecompañia] se reemplaza con el nombre asignado a su compañía, para el ejemplo usaremos la siguiente: 
 
-https://integradorqa.siesacloud.com/login/ecommerce 
+https://integradorqa.siesacloud.com/login/ecommerce [Ecommerce](https://integradorqa.siesacloud.com/login/ecommerce)
 
 Al ingresar a este enlace en un navegador web se debe mostrar algo similar a la siguiente imagen:
 
-![](https://github.com/joserodrigorr/DocumentacionPruebas/blob/main/Imagenes/GestorIntegraciones.png)
+{% include inline_image.html
+file="1_GestorIntegraciones.png" alt="" %}
+
