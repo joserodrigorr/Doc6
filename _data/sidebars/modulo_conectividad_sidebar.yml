@@ -4,8 +4,8 @@
 
 entries:
 - title: Sidebar
-  product: Modulo Conectividad
-  version: 1.0
+  product: Módulo Conectividad
+  version: 2.0
   folders:
 
   - title:
@@ -24,7 +24,7 @@ entries:
   - title: Empezando #Getting Started
     output: web, pdf
     folderitems:
-    - title: Modulo Conectividad inicial
+    - title: Modulo Conectividad
       url: /mc_landing_page.html
       output: web
 

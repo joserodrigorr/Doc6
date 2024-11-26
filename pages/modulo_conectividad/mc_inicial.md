@@ -1,9 +1,9 @@
 ---
-title: Modulo de Conectividad
+title: Módulo de Conectividad
 keywords: 
 last_updated: Noviembre 25, 2024
 tags: #[getting_started]
-summary: "Inicio del Modulo de conectividad"
+#summary: "Inicio del Modulo de conectividad"
 sidebar: modulo_conectividad_sidebar
 permalink: mc_inicial.html
 folder: modulo_conectividad
@@ -70,6 +70,7 @@ Donde [nombrecompañia] se reemplaza con el nombre asignado a su compañía, par
 https://integradorqa.siesacloud.com/login/ecommerce [Ecommerce](https://integradorqa.siesacloud.com/login/ecommerce)
 
 Al ingresar a este enlace en un navegador web se debe mostrar algo similar a la siguiente imagen:
+
 
 {% include inline_image.html
 file="1_GestorIntegraciones.png" alt="" %}

@@ -1,10 +1,13 @@
 ---
-title: "Bienvenidos a la Documentación"
+title: "Interfaces y Soluciones SAS"
 keywords: homepage
 tags: 
 sidebar: home_sidebar
 permalink: index.html
-summary: Pagina de inicio
+toc: false
+#summary: Pagina de inicio
 ---
 
-## Documentacion I&S
+## Bienvenidos a la Documentación
+
+Seleccione a la izquierda el producto que desee consultar
