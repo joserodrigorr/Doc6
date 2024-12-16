@@ -75,31 +75,34 @@ Al ingresar a este enlace en un navegador web se debe mostrar algo similar a la 
 {% include inline_image.html
 file="1_GestorIntegraciones.png" alt="" %}
 
--- Revisar desde Aqui
 
 Para ingresar debe disponer de un usuario (por lo general correo electrónico) 
 
 y una contraseña valida, credenciales asignadas por el administrador del Gestor de Integraciones, al ingresar las credenciales validas, se muestra el siguiente formulario: 
 
-Pegar imagen
+{% include inline_image.html
+file="MC_2.png" alt="" %}
 
 Al iniciar se muestran diferentes datos estadísticos del Gestor de integraciones.  
 
-Al presionar la opción de Integraciones al inicio en el panel izquierdo, aparece lo siguiente: 
+Al presionar la opción de **Integraciones** al inicio en el panel izquierdo, aparece lo siguiente: 
 
-pegar imagen
+{% include inline_image.html
+file="MC_3.png" alt="" %}
 
 Todos los ecosistemas con los que interactúa el Gestor de integraciones  
 
-Aquí aparece un panel con las opciones de Sistemas y Parámetros.  
+Aquí aparece un panel con las opciones de **Sistemas** y **Parámetros.**  
 
-Al presionar el botón de Parámetros, para el caso del módulo de conectividad, se presenta el siguiente formulario donde se deben configurar todas las variables necesarias para que el módulo de conectividad pueda interactuar con el ERP de Siesa. Por lo regular esto se configura en compañía del Integrador asignado. Estos parámetros se deben tener tanto para el ambiente de pruebas como para el de producción, es decir, todas las credenciales y accesos requeridos en el ERP de Siesa y para la Base de datos de Siesa son necesarios para poder trabajar en el ambiente de pruebas y en el ambiente Real, en este documento solo se muestra para el ambiente de pruebas. 
+Al presionar el botón de **Parámetros**, para el caso del módulo de conectividad, se presenta el siguiente formulario donde se deben configurar todas las variables necesarias para que el módulo de conectividad pueda interactuar con el ERP de Siesa. Por lo regular esto se configura en compañía del Integrador asignado. Estos parámetros se deben tener tanto para el ambiente de pruebas como para el de producción, es decir, todas las credenciales y accesos requeridos en el ERP de Siesa y para la Base de datos de Siesa son necesarios para poder trabajar en el ambiente de pruebas y en el ambiente Real, en este documento solo se muestra para el ambiente de pruebas. 
 
-pegar imagen
+{% include inline_image.html
+file="MC_4.png" alt="" %}
 
 Estas variables son: 
 
-Hacer tabla con las variables o pegar la imagen.
+{% include inline_image.html
+file="MC_5.png" alt="" %}
 
 
 
@@ -127,20 +130,24 @@ Data Source=192.168.0.1;Initial Catalog=UnoEE;User ID=connekta;Password=C0nn3ktA
 Data Source=ec2-3-233-106-192.compute-1.amazonaws.com;Initial Catalog=UnoEE_Pruebas;User ID=Pedrouser1;Password=Pedropass$82$% 
  
 
+
+
 Continuando en el formulario de Ecosistemas después de haber visto los parámetros: 
  
 
-Luego al presionar el botón de Sistemas se nos presentan todos los módulos que el Gestor de integraciones nos provee, en la siguiente imagen podemos observar específicamente, el Módulo de conectividad, que es lo que se explica en esta guía  
+
+Luego al presionar el botón de **Sistemas** se nos presentan todos los módulos que el Gestor de integraciones nos provee, en la siguiente imagen podemos observar específicamente, **el Módulo de conectividad**, que es lo que se explica en esta guía  
 
  
-
+ {% include inline_image.html
+file="MC_6.png" alt="" %}
  
 
 ### **Ingreso al Documentador** 
 
  
 
-Al presionar el botón Documentador (de la imagen anterior), se nos presentan dos opciones: Conectores y Consultas 
+Al presionar el botón Documentador (de la imagen anterior), se nos presentan dos opciones: **Conectores** y **Consultas** 
 
  
 
@@ -888,15 +895,7 @@ Dirección IP
 
 Cadena numérica que identifica a una máquina en una red IP. 
 
-## **Control de Cambios** 
 
-Modificaciones 
-
-Fecha 
-
-Versión inicial del documento 
-
-20/09/2024 
 
   
 
