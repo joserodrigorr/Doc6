@@ -150,9 +150,8 @@ file="MC_6.png" alt="" %}
 Al presionar el botón Documentador (de la imagen anterior), se nos presentan dos opciones: **Conectores** y **Consultas** 
 
  
-
- 
-
+{% include inline_image.html
+file="MC_7.png" alt="" %}
  
 
 ### **Conectores** 
@@ -164,6 +163,8 @@ Los conectores son especificaciones realizadas por Siesa para facilitar la impor
  
 
 Al elegir la opción Conectores del Documentador 
+
+--- Seguir aqui con las imagenes
 
 Se muestran todos los conectores estándar que se pueden usar para su compañía, aparece un listado ordenado por páginas. 
 
@@ -575,111 +576,61 @@ nombreDocumento: Descripción del conector en el sistema
 
 Y la banda cuatro de la guía contiene el “Body”, este es un ejemplo de la estructura del conector a usar en formato Json y sin datos, pero como ejemplo completo de cómo se debe usar el conector. Si damos copiar Body, nos copia algo como lo siguiente en este caso: 
 
- 
 
-{ 
+``` json
+{
+  "Inicial": [
+    {
+      "F_CIA": ""
+    }
+  ],
+  "Terceros": [
+    {
+      "F_CIA": "",
+      "F_ACTUALIZA_REG": "",
+      "F200_ID": "",
+      "F200_NIT": "",
+      "F200_DV_NIT": "",
+      "F200_ID_TIPO_IDENT": "",
+      "F200_IND_TIPO_TERCERO": "",
+      "F200_RAZON_SOCIAL": "",
+      "F200_APELLIDO1": "",
+      "F200_APELLIDO2": "",
+      "F200_NOMBRES": "",
+      "F200_NOMBRE_EST": "",
+      "F200_IND_CLIENTE": "",
+      "F200_IND_PROVEEDOR": "",
+      "F200_IND_EMPLEADO": "",
+      "F200_IND_ACCIONISTA": "",
+      "F200_IND_OTROS": "",
+      "F200_IND_INTERNO": "",
+      "F015_CONTACTO": "",
+      "F015_DIRECCION1": "",
+      "F015_DIRECCION2": "",
+      "F015_DIRECCION3": "",
+      "F015_ID_PAIS": "",
+      "F015_ID_DEPTO": "",
+      "F015_ID_CIUDAD": "",
+      "F015_ID_BARRIO": "",
+      "F015_TELEFONO": "",
+      "F015_FAX": "",
+      "F015_COD_POSTAL": "",
+      "F015_EMAIL": "",
+      "F200_FECHA_NACIMIENTO": "",
+      "F200_ID_CIIU": "",
+      "F200_IND_NO_DOMICILIADO": "",
+      "F200_IND_ESTADO": "",
+      "F015_CELULAR": ""
+    }
+  ],
+  "Final": [
+    {
+      "F_CIA": ""
+    }
+  ]
+}
+```
 
-"Inicial": [ 
-
-{ 
-
-"F_CIA": "" 
-
-} 
-
-], 
-
-"Terceros": [ 
-
-{ 
-
-"F_CIA": "", 
-
-"F_ACTUALIZA_REG": "", 
-
-"F200_ID": "", 
-
-"F200_NIT": "", 
-
-"F200_DV_NIT": "", 
-
-"F200_ID_TIPO_IDENT": "", 
-
-"F200_IND_TIPO_TERCERO": "", 
-
-"F200_RAZON_SOCIAL": "", 
-
-"F200_APELLIDO1": "", 
-
-"F200_APELLIDO2": "", 
-
-"F200_NOMBRES": "", 
-
-"F200_NOMBRE_EST": "", 
-
-"F200_IND_CLIENTE": "", 
-
-"F200_IND_PROVEEDOR": "", 
-
-"F200_IND_EMPLEADO": "", 
-
-"F200_IND_ACCIONISTA": "", 
-
-"F200_IND_OTROS": "", 
-
-"F200_IND_INTERNO": "", 
-
-"F015_CONTACTO": "", 
-
-"F015_DIRECCION1": "", 
-
-"F015_DIRECCION2": "", 
-
-"F015_DIRECCION3": "", 
-
-"F015_ID_PAIS": "", 
-
-"F015_ID_DEPTO": "", 
-
-"F015_ID_CIUDAD": "", 
-
-"F015_ID_BARRIO": "", 
-
-"F015_TELEFONO": "", 
-
-"F015_FAX": "", 
-
-"F015_COD_POSTAL": "", 
-
-"F015_EMAIL": "", 
-
-"F200_FECHA_NACIMIENTO": "", 
-
-"F200_ID_CIIU": "", 
-
-"F200_IND_NO_DOMICILIADO": "", 
-
-"F200_IND_ESTADO": "", 
-
-"F015_CELULAR": "" 
-
-} 
-
-], 
-
-"Final": [ 
-
-{ 
-
-"F_CIA": "" 
-
-} 
-
-] 
-
-} 
-
- 
 
 Se puede notar que es la estructura “vacía” en formato Json del conector y de cómo debe enviarse el “body”  luego en la petición. Veamos el ejemplo del “consumo” del API en Postman. Creamos una nueva petición (Add request) en Postman, procurando que sea POST, luego nos ubicamos en la Guía del Gestor y seleccionamos la Base URL y Copiar URL 
 
@@ -706,109 +657,59 @@ Luego ubicados en Postman se deben crear los Headers para Connikey y Connitoken 
 Luego se debe llenar la estructura copiada del body con los datos que se llevaran al ERP de Siesa. Y se copia esta estructura Json “llena” en la parte del Postman donde se maneja el Body a continuación se muestra la estructura Json ejemplo con datos, en este caso, solo llenamos los datos requeridos y algunos los dejamos vacíos, en su caso pueden llenar todo lo que requieran en su compañía, esta información debe ser copiada en la parte del Body de la petición en el Postman, como se muestra en la siguiente imagen en Postman.  
 
  
-
-{ 
-
-"Inicial": [ 
-
-{ 
-
-"F_CIA": "1" 
-
-} 
-
-], 
-
-"Terceros": [ 
-
-{ 
-
-"F_CIA": "1", 
-
-"F_ACTUALIZA_REG": "1", 
-
-"F200_ID": "9898989898", 
-
-"F200_NIT": "9898989898", 
-
-"F200_DV_NIT": "", 
-
-"F200_ID_TIPO_IDENT": "C", 
-
-"F200_IND_TIPO_TERCERO": "2", 
-
-"F200_RAZON_SOCIAL": "EJEMPLO DE TERCERO", 
-
-"F200_APELLIDO1": "", 
-
-"F200_APELLIDO2": "", 
-
-"F200_NOMBRES": "", 
-
-"F200_NOMBRE_EST": "EJEMPLO DE TERCERO", 
-
-"F200_IND_CLIENTE": "0",11 
-
-"F200_IND_PROVEEDOR": "0", 
-
-"F200_IND_EMPLEADO": "0", 
-
-"F200_IND_ACCIONISTA": "0", 
-
-"F200_IND_OTROS": "0", 
-
-"F200_IND_INTERNO": "0", 
-
-"F015_CONTACTO": "", 
-
-"F015_DIRECCION1": "", 
-
-"F015_DIRECCION2": "", 
-
-"F015_DIRECCION3": "", 
-
-"F015_ID_PAIS": "", 
-
-"F015_ID_DEPTO": "", 
-
-"F015_ID_CIUDAD": "", 
-
-"F015_ID_BARRIO": "", 
-
-"F015_TELEFONO": "", 
-
-"F015_FAX": "", 
-
-"F015_COD_POSTAL": "", 
-
-"F015_EMAIL": "", 
-
-"F200_FECHA_NACIMIENTO": "20230602", 
-
-"F200_ID_CIIU": "0010", 
-
-"F200_IND_NO_DOMICILIADO": "0", 
-
-"F200_IND_ESTADO": "1", 
-
-"F015_CELULAR": "" 
-
-} 
-
-], 
-
-"Final": [ 
-
-{ 
-
-"F_CIA": "1" 
-
-} 
-
-] 
-
-} 
-
+``` json
+{
+	"Inicial": [
+		{
+			"F_CIA": "1"
+		}
+	],
+	"Terceros": [
+		{
+			"F_CIA": "1",
+			"F_ACTUALIZA_REG": "1",
+			"F200_ID": "9898989898",
+			"F200_NIT": "9898989898",
+			"F200_DV_NIT": "",
+			"F200_ID_TIPO_IDENT": "C",
+			"F200_IND_TIPO_TERCERO": "2",
+			"F200_RAZON_SOCIAL": "EJEMPLO DE TERCERO",
+			"F200_APELLIDO1": "",
+			"F200_APELLIDO2": "",
+			"F200_NOMBRES": "",
+			"F200_NOMBRE_EST": "EJEMPLO DE TERCERO",
+			"F200_IND_CLIENTE": "0",
+			"F200_IND_PROVEEDOR": "0",
+			"F200_IND_EMPLEADO": "0",
+			"F200_IND_ACCIONISTA": "0",
+			"F200_IND_OTROS": "0",
+			"F200_IND_INTERNO": "0",
+			"F015_CONTACTO": "",
+			"F015_DIRECCION1": "",
+			"F015_DIRECCION2": "",
+			"F015_DIRECCION3": "",
+			"F015_ID_PAIS": "",
+			"F015_ID_DEPTO": "",
+			"F015_ID_CIUDAD": "",
+			"F015_ID_BARRIO": "",
+			"F015_TELEFONO": "",
+			"F015_FAX": "",
+			"F015_COD_POSTAL": "",
+			"F015_EMAIL": "",
+			"F200_FECHA_NACIMIENTO": "20230602",
+			"F200_ID_CIIU": "0010",
+			"F200_IND_NO_DOMICILIADO": "0",
+			"F200_IND_ESTADO": "1",
+			"F015_CELULAR": ""
+		}
+	],
+	"Final": [
+		{
+			"F_CIA": "1"
+		}
+	]
+}
+```
  
 
 Al copiar en Postman el Json anterior en la sección Body 
