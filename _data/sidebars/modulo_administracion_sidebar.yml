@@ -4,7 +4,7 @@
 
 entries:
 - title: Sidebar
-  product: Módulo Conectividad
+  product: Módulo Administración
   version: 
   folders:
 
@@ -24,12 +24,12 @@ entries:
   - title: Empezando #Getting Started
     output: web, pdf
     folderitems:
-    - title: Modulo Conectividad
-      url: /mc_landing_page.html
+    - title: Modulo de Administración
+      url: /ma_landing_page.html
       output: web
 
     - title: Guía
-      url: /mc_guia.html
+      url: /ma_guia.html
       output: web, pdf
 
    # - title: Sample 2
