@@ -28,8 +28,8 @@ entries:
       url: /mc_landing_page.html
       output: web
 
-    - title: inicial
-      url: /mc_inicial.html
+    - title: Guía
+      url: /mc_guia.html
       output: web, pdf
 
    # - title: Sample 2

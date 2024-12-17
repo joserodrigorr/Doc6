@@ -5,7 +5,7 @@ last_updated: Noviembre 25, 2024
 tags: #[getting_started]
 #summary: "Inicio del Modulo de conectividad"
 sidebar: modulo_conectividad_sidebar
-permalink: mc_inicial.html
+permalink: mc_guia.html
 folder: modulo_conectividad
 ---
 
@@ -134,7 +134,8 @@ Data Source=ec2-3-233-106-192.compute-1.amazonaws.com;Initial Catalog=UnoEE_Prue
 
 Continuando en el formulario de Ecosistemas después de haber visto los parámetros: 
  
-
+{% include inline_image.html
+file="MC_3.png" alt="" %}
 
 Luego al presionar el botón de **Sistemas** se nos presentan todos los módulos que el Gestor de integraciones nos provee, en la siguiente imagen podemos observar específicamente, **el Módulo de conectividad**, que es lo que se explica en esta guía  
 
