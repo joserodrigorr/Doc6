@@ -9,9 +9,7 @@ permalink: mc_guia.html
 folder: modulo_conectividad
 ---
 
-## **Descripción:**
-
-## **Módulo de Conectividad:** ##
+## **Descripción:** ##
 
 Un módulo de conectividad es una herramienta que facilita la conexión entre diferentes sistemas que utilizas en tu empresa. Imagina que es como un "puente" que une tus sistemas con otros sistemas externos (como tu sistema de ventas con el sistema de inventario de un proveedor).
 
