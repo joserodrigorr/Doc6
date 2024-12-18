@@ -1,12 +1,12 @@
 ---
 title: Módulo de Conectividad
 keywords: 
-last_updated: Noviembre 25, 2024
+last_updated: Diciembre 18, 2024
 tags: #[getting_started]
 #summary: "Inicio del Modulo de conectividad"
-sidebar: modulo_conectividad_sidebar
-permalink: mc_guia.html
-folder: modulo_conectividad
+sidebar: sistema_integracion_sidebar
+permalink: si_mc_guia.html
+folder: sistema_integracion
 ---
 
 ## **Descripción:** ##

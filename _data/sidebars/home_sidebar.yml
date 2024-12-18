@@ -14,12 +14,9 @@ entries:
     #- title: Theme instructions
       #url: /mydoc_introduction.html
       #output: web
-    - title: Módulo Conectividad
-      url: /mc_landing_page.html
-      output: web
-    - title: Módulo Administración
-      url: /ma_landing_page.html
-      output: web
+    - title: Sistema de Integración
+      url: /si_landing_page.html
+      output: web  
     - title: Product 1
       url: /p1_landing_page.html
       output: web
