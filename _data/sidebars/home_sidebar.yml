@@ -8,9 +8,9 @@ entries:
   - title: Productos #Products
     output: web
     folderitems:
-    - title: Noticias #News
-      url: /news.html
-      output: web
+    #- title: Noticias #News
+      #url: /news.html
+      #output: web
     #- title: Theme instructions
       #url: /mydoc_introduction.html
       #output: web

@@ -5,8 +5,8 @@ topnav:
   items:
     - title: GT #GitHub
       external_url: https://www.generictransfer.com/login.aspx #https://github.com/tomjoht/documentation-theme-jekyll
-    - title: Noticias #News
-      url: /news
+    #- title: Noticias #News
+     # url: /news
 
 #Topnav dropdowns
 topnav_dropdowns:
