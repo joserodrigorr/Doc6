@@ -28,10 +28,12 @@ topnav_dropdowns:
         #- title: Jekyll Documentation Theme
           # url: /mydoc_introduction.html
         - title: Sistema de Integración
-          url: /si_landing_page.html   
-        - title: Product 1
-          url: /p1_landing_page.html
-        - title: Product 2
-          url: /p2_landing_page.html 
+          url: /si_landing_page.html 
+        - title: Generic Transfer
+          url: /gt_landing_page.html    
+        #- title: Product 1
+         # url: /p1_landing_page.html
+        #- title: Product 2
+          #url: /p2_landing_page.html 
 
 # Copyright 2024 Siesa
