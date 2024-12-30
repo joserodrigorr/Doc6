@@ -1,0 +1,445 @@
+---
+title: APIs V2
+keywords: mydoc
+sidebar: APIs_V2_sidebar
+toc: true #false
+permalink: APIs_V2.html
+folder: APIs_V2
+---
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Documentaci&#243;n de las APIs versi&#243;n dos</title>
+<style type="text/css">
+    li { list-style: none;  margin: 0; }
+    p { margin: 0; }
+    span.foldopened { color: white; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: visible;
+    cursor:pointer; }
+
+
+    span.foldclosed { color: #666666; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: hidden;
+    cursor:pointer; }
+
+    span.foldspecial { color: #666666; font-size: xx-small; border-style: none solid solid none;
+    border-color: #CCCCCC; border-width: 1; font-family: sans-serif; padding: 0em 0.1em 0em 0.1em; background: #e0e0e0;
+    cursor:pointer; }
+
+    span.l { color: red; font-weight: bold; }
+
+    a.mapnode:link {text-decoration: none; color: black; }
+    a.mapnode:visited {text-decoration: none; color: black; }
+    a.mapnode:active {text-decoration: none; color: black; }
+    a.mapnode:hover {text-decoration: none; color: black; background: #eeeee0; }
+
+</style>
+<!-- ^ Position is not set to relative / absolute here because of Mozilla -->
+</head>
+<body>
+
+<script type="text/javascript">
+   // Here we implement folding. It works fine with MSIE5.5, MSIE6.0 and
+   // Mozilla 0.9.6.
+
+   if (document.layers) {
+      //Netscape 4 specific code
+      pre = 'document.';
+      post = ''; }
+   if (document.getElementById) {
+      //Netscape 6 specific code
+      pre = 'document.getElementById("';
+      post = '").style'; }
+   if (document.all) {
+      //IE4+ specific code
+      pre = 'document.all.';
+      post = '.style'; }
+
+function layer_exists(layer) {
+   try {
+      eval(pre + layer + post);
+      return true; }
+   catch (error) {
+      return false; }}
+
+function show_layer(layer) {
+   eval(pre + layer + post).position = 'relative'; 
+   eval(pre + layer + post).visibility = 'visible'; }
+
+function hide_layer(layer) {
+   eval(pre + layer + post).visibility = 'hidden';
+   eval(pre + layer + post).position = 'absolute'; }
+
+function hide_folder(folder) {
+    hide_folding_layer(folder)
+    show_layer('show'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+}
+
+function show_folder(folder) {
+    // Precondition: all subfolders are folded
+
+    show_layer('hide'+folder);
+    hide_layer('show'+folder);
+    show_layer('fold'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+
+    var i;
+    for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       show_layer('show'+folder+'_'+i); }
+}
+function show_folder_completely(folder) {
+    // Precondition: all subfolders are folded
+
+    show_layer('hide'+folder);
+    hide_layer('show'+folder);
+    show_layer('fold'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+
+    var i;
+    for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       show_folder_completely(folder+'_'+i); }
+}
+
+
+
+function hide_folding_layer(folder) {
+   var i;
+   for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       hide_folding_layer(folder+'_'+i); }
+
+   hide_layer('hide'+folder);
+   hide_layer('show'+folder);
+   hide_layer('fold'+folder);
+
+   scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+}
+
+function fold_document() {
+   var i;
+   var folder = '1';
+   for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       hide_folder(folder+'_'+i); }
+}
+
+function unfold_document() {
+   var i;
+   var folder = '1';
+   for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       show_folder_completely(folder+'_'+i); }
+}
+
+</script>
+<SPAN class="foldspecial" onclick="fold_document()">All +</SPAN>
+<SPAN class="foldspecial" onclick="unfold_document()">All -</SPAN>
+<p><span style="color: #000000;font-size: 166%;font-family: SansSerif, sans-serif; ">Documentaci&#243;n de las APIs versi&#243;n dos</span>
+<ul><li><span id="show1_1" class="foldclosed" onClick="show_folder('1_1')" style="POSITION: absolute">+</span> <span id="hide1_1" class="foldopened" onClick="hide_folder('1_1')">-</span>
+<span style="color: #0033ff;font-size: 150%;font-family: SansSerif, sans-serif; ">CONNEKTA</span>
+<ul id="fold1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_1" class="foldclosed" onClick="show_folder('1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_1" class="foldopened" onClick="hide_folder('1_1_1')">-</span>
+<span style="color: #00b439;font-size: 133%;font-family: SansSerif, sans-serif; ">CONSULTAS DINAMICAS</span>
+<ul id="fold1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_1_1" class="foldclosed" onClick="show_folder('1_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_1_1" class="foldopened" onClick="hide_folder('1_1_1_1')">-</span>
+<span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">V3 Consultas Dinamicas</span>
+<ul id="fold1_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_1_1_1" class="foldclosed" onClick="show_folder('1_1_1_1_1')" style="POSITION: absolute">+</span> <span id="hide1_1_1_1_1" class="foldopened" onClick="hide_folder('1_1_1_1_1')">-</span>
+<span style="color: #111111;">Request URL</span>
+<ul id="fold1_1_1_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #111111;">GET</span>
+
+</li>
+<li><span style="color: #111111;">{base_url_qa}/api/connekta/v3/consultasporcompania?idCompania={idCompania}</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_1_1_2" class="foldclosed" onClick="show_folder('1_1_1_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_1_1_2" class="foldopened" onClick="hide_folder('1_1_1_1_2')">-</span>
+<span style="color: #111111;">Notas:</span>
+<ul id="fold1_1_1_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #111111;">Listado de consultas asociadas al cliente que tiene disponibles para usar.</span>
+<p><span style="color: #111111;">Y se listan las consultas de lo que el usuario especifico tenga autorizado en permisos</span>
+<p><span style="color: #111111;">Es util para que el cliente analice el listado de consultas que tiene disponible y para que le de permisos a los usuarios que desee.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_1_1_1_3" class="foldclosed" onClick="show_folder('1_1_1_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_1_1_3" class="foldopened" onClick="hide_folder('1_1_1_1_3')">-</span>
+<span style="color: #111111;">Uso:</span>
+<ul id="fold1_1_1_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #111111;">&#xa;    <p>&#xa;      <img src="images/API_V2_0001.png" >&#xa;    </p>&#xa;  </span>
+<p><span style="color: #111111;">Son necesarios los datos de autenticaci&#243;n</span>
+<span style="color: #111111;">&#xa;    <p>&#xa;      <img src="images/API_V2_0002.png" >&#xa;    </p>&#xa;  </span>
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_1_2" class="foldclosed" onClick="show_folder('1_1_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_1_2" class="foldopened" onClick="hide_folder('1_1_1_2')">-</span>
+<span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">V3 Ejecutar Consulta Dinamica</span>
+<ul id="fold1_1_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_1_1_2_1" class="foldclosed" onClick="show_folder('1_1_1_2_1')" style="POSITION: absolute">+</span> <span id="hide1_1_1_2_1" class="foldopened" onClick="hide_folder('1_1_1_2_1')">-</span>
+<span style="color: #111111;">Request URL</span>
+<ul id="fold1_1_1_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #111111;">GET</span>
+<p><span style="color: #111111;">https://serviciosqa.siesacloud.com/api/connekta/v3/ejecutarconsulta?idCompania=1&amp;descripcion=interfacesysoluciones_terceros&amp;paginacion=numPag=1|tamPag=100</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_1_1_2_2" class="foldclosed" onClick="show_folder('1_1_1_2_2')" style="POSITION: absolute">+</span> <span id="hide1_1_1_2_2" class="foldopened" onClick="hide_folder('1_1_1_2_2')">-</span>
+<span style="color: #111111;">Notas:</span>
+<ul id="fold1_1_1_2_2" style="POSITION: relative; VISIBILITY: visible;"><li><p><span style="color: #111111;">El funcionamiento natural de la versi&#243;n tres es manejar querys b&#225;sicos.
+<br>
+Se aplica mucha generalidad en esta API, para ser compatible con la versi&#243;n anterior de Connekta. Permite quitar la opci&#243;n de los par&#225;metros. 
+<br>
+Tambi&#233;n en la consulta se pueden manejar varias Clausulas "Select.." incluso podr&#237;a llegar hasta procedimientos almacenados. 
+<br>
+Se dejo el par&#225;metro de la paginaci&#243;n como opcional, aunque al cliente es mejor sugerirle que lo use, para mejor desempe&#241;o. 
+<br>
+Incluso ni mencionarle que lo puede omitir. Solo se dejo por compatibilidad como se menciono. 
+<br>
+Tambi&#233;n se pueden ejecutar procedimientos almacenados o mandar a llamar a varias tablas, pero cuando se usa con paginaci&#243;n esto ya no se podr&#237;a realizar, se puede unicamente cuando se usa sin paginaci&#243;n.</span>
+</li>
+</ul>
+</li>
+<li><span id="show1_1_1_2_3" class="foldclosed" onClick="show_folder('1_1_1_2_3')" style="POSITION: absolute">+</span> <span id="hide1_1_1_2_3" class="foldopened" onClick="hide_folder('1_1_1_2_3')">-</span>
+<span style="color: #111111;">Uso:</span>
+<ul id="fold1_1_1_2_3" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #111111;">Uso Simple, una solo consulta</span>
+
+</li>
+<li><span style="color: #111111;">&#xa;    <p>&#xa;      <img src="images/API_V2_0003.png">&#xa;      &#xa;    </p>&#xa;  </span>
+
+</li>
+<li><span style="color: #111111;">Uso de varias consultas al tiempo</span>
+
+</li>
+<li><span style="color: #111111;">&#xa;    <p>&#xa;      <img src="images/API_V2_0004.png">&#xa;      &#xa;    </p>&#xa;  </span>
+<ul><li><span style="color: #111111;">Muestra dos tablas al ejecutar</span>
+
+</li>
+<li><span style="color: #111111;">&#xa;    <p>&#xa;      <img src="images/API_V2_0005.png">&#xa;      &#xa;    </p>&#xa;  </span>
+
+</li>
+<li><span style="color: #111111;">&#xa;    <p>&#xa;      <img src="images/API_V2_0006.png">&#xa;      &#xa;    </p>&#xa;  </span>
+
+</li>
+<li><span style="color: #111111;">Si no se quitan los par&#225;metros se presenta el error siguiente al ejecutar</span>
+
+</li>
+<li><span style="color: #111111;">&#xa;    <p>&#xa;      <img src="images/API_V2_0007.png">&#xa;      &#xa;    </p>&#xa;  </span>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_1_3" class="foldclosed" onClick="show_folder('1_1_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_1_3" class="foldopened" onClick="hide_folder('1_1_1_3')">-</span>
+<span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">V3.1 Ejecutar Consulta Dinamica</span>
+<ul id="fold1_1_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #111111;">Request URL</span>
+
+</li>
+<li><span style="color: #111111;">Notas:</span>
+
+</li>
+<li><span style="color: #111111;">Uso:</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_1_4" class="foldclosed" onClick="show_folder('1_1_1_4')" style="POSITION: absolute">+</span> <span id="hide1_1_1_4" class="foldopened" onClick="hide_folder('1_1_1_4')">-</span>
+<span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">V4 Ejecutar Consulta Dinamica</span>
+<ul id="fold1_1_1_4" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #111111;">Request URL</span>
+
+</li>
+<li><span style="color: #111111;">Notas:</span>
+
+</li>
+<li><span style="color: #111111;">Uso:</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_1_5" class="foldclosed" onClick="show_folder('1_1_1_5')" style="POSITION: absolute">+</span> <span id="hide1_1_1_5" class="foldopened" onClick="hide_folder('1_1_1_5')">-</span>
+<span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">V4.1 Ejecutar Consulta Dinamica</span>
+<ul id="fold1_1_1_5" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #111111;">Request URL</span>
+
+</li>
+<li><span style="color: #111111;">Notas:</span>
+
+</li>
+<li><span style="color: #111111;">Uso:</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_1_6" class="foldclosed" onClick="show_folder('1_1_1_6')" style="POSITION: absolute">+</span> <span id="hide1_1_1_6" class="foldopened" onClick="hide_folder('1_1_1_6')">-</span>
+<span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">V5 Ejecutar Consulta Dinamica</span>
+<ul id="fold1_1_1_6" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #111111;">Request URL</span>
+
+</li>
+<li><span style="color: #111111;">Notas</span>
+
+</li>
+<li><span style="color: #111111;">Uso</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_2" class="foldclosed" onClick="show_folder('1_1_2')" style="POSITION: absolute">+</span> <span id="hide1_1_2" class="foldopened" onClick="hide_folder('1_1_2')">-</span>
+<span style="color: #00b439;font-size: 133%;font-family: SansSerif, sans-serif; ">INTERFACES</span>
+<ul id="fold1_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">V3 Interfaces Queries Por Sistema</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_3" class="foldclosed" onClick="show_folder('1_1_3')" style="POSITION: absolute">+</span> <span id="hide1_1_3" class="foldopened" onClick="hide_folder('1_1_3')">-</span>
+<span style="color: #00b439;font-size: 133%;font-family: SansSerif, sans-serif; ">LOGS</span>
+<ul id="fold1_1_3" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">V3 Gestionar Log</span>
+
+</li>
+<li><span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">V3.1 Gestionar Log</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_4" class="foldclosed" onClick="show_folder('1_1_4')" style="POSITION: absolute">+</span> <span id="hide1_1_4" class="foldopened" onClick="hide_folder('1_1_4')">-</span>
+<span style="color: #00b439;font-size: 133%;font-family: SansSerif, sans-serif; ">PARAMETROS</span>
+<ul id="fold1_1_4" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">V3 Parametros Por Sistema</span>
+
+</li>
+<li><span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">V3 Parametros Por Sistema</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_5" class="foldclosed" onClick="show_folder('1_1_5')" style="POSITION: absolute">+</span> <span id="hide1_1_5" class="foldopened" onClick="hide_folder('1_1_5')">-</span>
+<span style="color: #00b439;font-size: 133%;font-family: SansSerif, sans-serif; ">TOKEN</span>
+<ul id="fold1_1_5" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">V3 Generar Token</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_1_6" class="foldclosed" onClick="show_folder('1_1_6')" style="POSITION: absolute">+</span> <span id="hide1_1_6" class="foldopened" onClick="hide_folder('1_1_6')">-</span>
+<span style="color: #00b439;font-size: 133%;font-family: SansSerif, sans-serif; ">NOTAS</span>
+<ul id="fold1_1_6" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">Motor</span>
+<ul><li><span style="color: #111111;font-family: SansSerif, sans-serif; ">SQL Server</span>
+
+</li>
+
+</ul>
+</li>
+<li><span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">Autenticaci&#243;n</span>
+<ul><li><span style="color: #111111;">Para ejecutar todas las APIs se requiere el uso de Connikey y ConniToken</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_2" class="foldclosed" onClick="show_folder('1_2')" style="POSITION: absolute">+</span> <span id="hide1_2" class="foldopened" onClick="hide_folder('1_2')">-</span>
+<span style="color: #0033ff;font-size: 150%;font-family: SansSerif, sans-serif; ">SIESA</span>
+<ul id="fold1_2" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_2_1" class="foldclosed" onClick="show_folder('1_2_1')" style="POSITION: absolute">+</span> <span id="hide1_2_1" class="foldopened" onClick="hide_folder('1_2_1')">-</span>
+<span style="color: #00b439;font-size: 133%;font-family: SansSerif, sans-serif; ">ERP</span>
+<ul id="fold1_2_1" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_2_1_1" class="foldclosed" onClick="show_folder('1_2_1_1')" style="POSITION: absolute">+</span> <span id="hide1_2_1_1" class="foldopened" onClick="hide_folder('1_2_1_1')">-</span>
+<span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">MODULO CONECTIVIDAD</span>
+<ul id="fold1_2_1_1" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #111111;">V3 Consultas Estandar</span>
+
+</li>
+<li><span style="color: #111111;">V3 Ejecutar Consulta Estandar</span>
+
+</li>
+<li><span style="color: #111111;">V3 Conectores Estandar</span>
+
+</li>
+<li><span style="color: #111111;">V3 Conectores Estructura Estandar</span>
+
+</li>
+<li><span style="color: #111111;">V3 Conectores Generar Plano Estandar</span>
+
+</li>
+<li><span style="color: #111111;">V3 Conectores Importar Estandar</span>
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_2_1_2" class="foldclosed" onClick="show_folder('1_2_1_2')" style="POSITION: absolute">+</span> <span id="hide1_2_1_2" class="foldopened" onClick="hide_folder('1_2_1_2')">-</span>
+<span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">APIS DINAMICAS</span>
+<ul id="fold1_2_1_2" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #111111;">V3 Conectores Dinamicos</span>
+
+</li>
+<li><span style="color: #111111;">V3 Conectores Estructura Dinamico</span>
+
+</li>
+<li><span style="color: #111111;">V3 Conectores Generar Plano Dinamico</span>
+
+</li>
+<li><span style="color: #111111;">V3 Conectores Generar Plano Impodatos Dinamico</span>
+
+</li>
+<li><span style="color: #111111;">V3 Conectores Importar Dinamico</span>
+
+</li>
+<li><span style="color: #111111;">V3.1 Conectores Importar Dinamico</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_2_2" class="foldclosed" onClick="show_folder('1_2_2')" style="POSITION: absolute">+</span> <span id="hide1_2_2" class="foldopened" onClick="hide_folder('1_2_2')">-</span>
+<span style="color: #00b439;font-size: 133%;font-family: SansSerif, sans-serif; ">NOMINA WEB</span>
+<ul id="fold1_2_2" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">V3 Nomina Web</span>
+
+</li>
+<li><span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">V3.1 Nomina Web</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span id="show1_3" class="foldclosed" onClick="show_folder('1_3')" style="POSITION: absolute">+</span> <span id="hide1_3" class="foldopened" onClick="hide_folder('1_3')">-</span>
+<span style="color: #0033ff;font-size: 150%;font-family: SansSerif, sans-serif; ">ZEUS</span>
+<ul id="fold1_3" style="POSITION: relative; VISIBILITY: visible;"><li><span id="show1_3_1" class="foldclosed" onClick="show_folder('1_3_1')" style="POSITION: absolute">+</span> <span id="hide1_3_1" class="foldopened" onClick="hide_folder('1_3_1')">-</span>
+<span style="color: #00b439;font-size: 133%;font-family: SansSerif, sans-serif; ">SALUD</span>
+<ul id="fold1_3_1" style="POSITION: relative; VISIBILITY: visible;"><li><span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">MODULO CONECTIVIDAD</span>
+
+</li>
+<li><span style="color: #990000;font-size: 116%;font-family: SansSerif, sans-serif; ">APIS DINAMICAS</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul><SCRIPT type="text/javascript">
+fold_document();
+</SCRIPT>
+</body>
+</html>
