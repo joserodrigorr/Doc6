@@ -28,9 +28,9 @@ entries:
       url: /APIs_V2.html
       output: web
 
-    #- title: Acerca de
-     # url: /gt_acerca_de.html
-      #output: web, pdf
+    - title: Acerca de
+      url: /apis_v2_acerca_de.html
+      output: web, pdf
     #- title: Guía Módulo Conectividad
       #url: /si_mc_guia.html
       #output: web, pdf
