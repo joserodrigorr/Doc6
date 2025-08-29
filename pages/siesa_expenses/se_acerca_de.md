@@ -18,13 +18,13 @@ Aqui se pondran los capitulos de ejemplo para un libro
 ### **Audio1**
 
 <audio controls>
-  <source src="/pdf/0_Introduccion.mp3" type="audio/mpeg">
+  <source src="DOC6/pdf/0_Introduccion.mp3" type="audio/mpeg">
   Tu navegador no soporta el elemento de audio.
 </audio>
 
 ### **Audio2**
 
 <audio controls>
-  <source src="/pages/libro1/1_Salud.mp3" type="audio/mpeg">
+  <source src="DOC6/pages/libro1/1_Salud.mp3" type="audio/mpeg">
   Tu navegador no soporta el elemento de audio.
 </audio>
