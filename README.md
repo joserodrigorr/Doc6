@@ -1,1 +1,1 @@
-# Documentación de audios de Kit JR3
+# Documentación de audios de los libros grabados desde Kit JR3

@@ -3,8 +3,8 @@
 topnav:
 - title: Topnav
   items:
-    - title: GT #GitHub
-      external_url: https://www.generictransfer.com/login.aspx #https://github.com/tomjoht/documentation-theme-jekyll
+    - title: KIT #GitHub
+      external_url: https://kit-jr3.com.co/ #https://github.com/tomjoht/documentation-theme-jekyll
     #- title: Noticias #News
      # url: /news
 
@@ -23,7 +23,7 @@ topnav_dropdowns:
          # external_url: http://stackoverflow.com/questions/tagged/jekyll
         #- title: Jekyll on my blog
          # external_url: http://idratherbewriting.com/category-jekyll/
-    - title: Productos #Products
+    - title: Libros #Products
       folderitems:
         #- title: Jekyll Documentation Theme
           # url: /mydoc_introduction.html
@@ -40,4 +40,4 @@ topnav_dropdowns:
         #- title: Product 2
           #url: /p2_landing_page.html 
 
-# Copyright 2024 Siesa
+# Copyright 2025 KIT JR3

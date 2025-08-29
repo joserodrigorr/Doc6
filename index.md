@@ -1,13 +1,13 @@
 ---
-title: "Interfaces y Soluciones SAS"
+title: "KIT JR3"
 keywords: homepage
-tags: 
+tags:
 sidebar: home_sidebar
 permalink: index.html
 toc: false
 #summary: Pagina de inicio
 ---
 
-## Bienvenidos a la Documentación del área de integraciones de Siesa ##
+## Bienvenidos a los audios de libros de KIT-JR3
 
-Seleccione a la izquierda el producto que desee consultar
+Seleccione a la izquierda el libro que desee escuchar

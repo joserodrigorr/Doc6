@@ -9,7 +9,7 @@ topnav_title: Documentación # Jekyll Documentation Theme
 site_title: Documentación # Jekyll theme for documentation
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: Copyright 2024 SIESA #Copyright 2021 Google LLC
+company_name: Copyright 2025 KIT JR3 #Copyright 2021 Google LLC
 # this appears in the footer
 
 github_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
@@ -33,7 +33,7 @@ exclude:
   - vendor
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: Documentación I&S #Jekyll documentation theme
+feedback_subject_line: Documentación KIT JR3 #Jekyll documentation theme
 
 feedback_email:  joserodrigorr@hotmail.com  #tomjoht@gmail.com
 # used as a contact email for the Feedback link in the top navigation bar
