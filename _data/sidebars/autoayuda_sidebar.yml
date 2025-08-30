@@ -1,0 +1,38 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+# Esta es la tabla de contenidos de la barra lateral. El código de la barra lateral recorre las secciones y proporciona el formato adecuado.
+
+
+entries:
+- title: Sidebar
+  product: Autoayuda
+  version: 
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Empezando #Getting Started
+    output: web, pdf
+    folderitems:
+    - title: Autoayuda
+      url: /au_landing_page.html
+      output: web
+
+    - title: Afirmaciones
+      url: /au_afirmaciones.html
+      output: web, pdf
+# de aqui en adelante poner los otros libros de autoayuda
+
+    
+
+# Copyright 2025 KIT JR3
