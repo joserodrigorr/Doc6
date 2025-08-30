@@ -28,3 +28,5 @@ Aqui se pondran los capitulos de ejemplo para un libro
   <source src="/pages/libro1/1_Salud.mp3" type="audio/mpeg">
   Tu navegador no soporta el elemento de audio.
 </audio>
+
+<a target="_blank" rel="noopener" class="noCrossRef" href="/pages/libro1/1_Salud.mp3"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Audio Download</button></a>
