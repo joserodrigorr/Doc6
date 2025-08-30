@@ -29,4 +29,4 @@ Aqui se pondran los capitulos de ejemplo para un libro
   Tu navegador no soporta el elemento de audio.
 </audio>
 
-<a target="_blank" rel="noopener" class="noCrossRef" href="Doc6/pages/libro1/1_Salud.mp3"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Audio Download</button></a>
+<a target="_blank" rel="noopener" class="noCrossRef" href="./pages/libro1/1_Salud.mp3"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Audio Download</button></a>
