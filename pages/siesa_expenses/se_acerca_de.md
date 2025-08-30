@@ -18,7 +18,7 @@ Aqui se pondran los capitulos de ejemplo para un libro
 ### **Audio1**
 
 <audio controls>
-  <source src="/pdf/0_Introduccion.mp3" type="audio/mpeg">
+  <source src="/pages/libro1/0_Introduccion.mp3" type="audio/mpeg">
   Tu navegador no soporta el elemento de audio.
 </audio>
 
